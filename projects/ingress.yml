@@ -1,0 +1,23 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: network-ingress
+  namespace: network
+spec:
+  rules:
+  - http:
+      paths:
+      - pathType: Prefix
+        path: /nginx
+        backend:
+          service:
+            name: nginx-service
+            port:
+              number: 80
+      - pathType: Prefix
+        path: /climate
+        backend:
+          service:
+            name: climate-app-service
+            port:
+              number: 5173
