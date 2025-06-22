@@ -3,6 +3,8 @@ kind: Ingress
 metadata:
   name: network-ingress
   namespace: network
+  annotations:
+    nginx.ingress.kubernetes.io/rewrite-target: /
 spec:
   rules:
   - http:
@@ -15,7 +17,7 @@ spec:
             port:
               number: 80
       - pathType: Prefix
-        path: /climate
+        path: /
         backend:
           service:
             name: climate-app-service
