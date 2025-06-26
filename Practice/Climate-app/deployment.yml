@@ -14,10 +14,10 @@ spec:
         app: climate-app
     spec:
       containers:
-      - name: climate-app
-        image: dattarahegaonkar09/climate-app
-        ports:
-        - containerPort: 5173
-        env:
-        - name: API_KEY
-          value: "d0f143115c3546d095590925242206"
+        - name: climate-app
+          image: dattarahegaonkar09/climate-app
+          ports:
+            - containerPort: 5173
+          env:
+            - name: API_KEY
+              value: "d0f143115c3546d095590925242206"
