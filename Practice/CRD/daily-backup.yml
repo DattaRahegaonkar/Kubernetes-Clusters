@@ -1,0 +1,9 @@
+
+apiVersion: myorg.io/v1
+kind: Backup
+metadata:
+  name: daily-db-backup
+spec:
+  dbName: user-database
+  schedule: "0 2 * * *"  # Daily at 2:00 AM
+
